@@ -1,5 +1,6 @@
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 
@@ -77,11 +78,23 @@ namespace StencilAndStamping
             if (activeSlot.Itemstack?.Item is not ItemStencil stencil) return;
             if (stencil.IsDesigned(activeSlot.Itemstack)) return;
 
-            // Check offhand has a knife
-            ItemSlot offhandSlot = fromPlayer.Entity.LeftHandItemSlot;
-            if (offhandSlot == null || offhandSlot.Empty) return;
-            string offhandCode = offhandSlot.Itemstack?.Collectible?.Code?.Path ?? "";
-            if (!offhandCode.Contains("knife")) return;
+            // Check hotbar has a knife
+            ItemSlot knifeSlot = null;
+            var hotbar = fromPlayer.InventoryManager.GetOwnInventory(GlobalConstants.hotBarInvClassName);
+            if (hotbar != null)
+            {
+                foreach (ItemSlot slot in hotbar)
+                {
+                    if (slot == null || slot.Empty) continue;
+                    string code = slot.Itemstack?.Collectible?.Code?.Path ?? "";
+                    if (code.Contains("knife"))
+                    {
+                        knifeSlot = slot;
+                        break;
+                    }
+                }
+            }
+            if (knifeSlot == null) return;
 
             // Apply the design to the stencil
             ItemStencil.ApplyDesign(
@@ -94,7 +107,7 @@ namespace StencilAndStamping
             activeSlot.MarkDirty();
 
             // Damage the knife
-            offhandSlot.Itemstack.Collectible.DamageItem(world, fromPlayer.Entity, offhandSlot);
+            knifeSlot.Itemstack.Collectible.DamageItem(world, fromPlayer.Entity, knifeSlot);
 
             // Sound feedback
             world.PlaySoundAt(
