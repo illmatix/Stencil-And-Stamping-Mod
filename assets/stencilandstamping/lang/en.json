@@ -33,5 +33,18 @@
   "stencilandstamping:stencil-filled": "Cells: {0}/{1} filled",
   "stencilandstamping:stencil-cellborders": "Cell borders: on",
   "stencilandstamping:stencil-edgeborder": "Edge border: on",
-  "stencilandstamping:stencil-blank": "Blank — use on a cutting board to design"
+  "stencilandstamping:stencil-blank": "Blank — use on a cutting board to design",
+
+  "item-stamp-leather": "Leather Stamp",
+  "item-stamp-copper": "Copper Stamp",
+  "item-stamp-tinbronze": "Tin Bronze Stamp",
+  "item-stamp-iron": "Iron Stamp",
+
+  "itemdesc-stamp-leather": "A stamp with a leather stencil. Ready to ink and press.",
+  "itemdesc-stamp-copper": "A stamp with a copper stencil. Clean impressions.",
+  "itemdesc-stamp-tinbronze": "A stamp with a tin bronze stencil. Crisp and durable.",
+  "itemdesc-stamp-iron": "A stamp with an iron stencil. The finest detail, longest life.",
+
+  "stencilandstamping:stamp-cached": "Design cached — ready to re-stamp",
+  "stencilandstamping:stamp-nodesign": "No design — assemble with a designed stencil"
 }
