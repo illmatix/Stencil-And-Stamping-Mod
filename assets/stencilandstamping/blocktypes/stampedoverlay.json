@@ -9,7 +9,7 @@
     "overlay": { "base": "game:block/wood/planks/oak1" }
   },
   "drawtype": "JSON",
-  "renderpass": "OpaqueNoCull",
+  "renderpass": "Transparent",
   "sidesolid": {
     "all": false
   },
