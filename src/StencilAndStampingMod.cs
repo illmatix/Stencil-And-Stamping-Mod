@@ -16,6 +16,8 @@ namespace StencilAndStamping
                 Config = new StencilAndStampingConfig();
                 api.StoreModConfig(Config, "StencilAndStampingConfig.json");
             }
+
+            api.RegisterItemClass("ItemInkPot", typeof(ItemInkPot));
         }
     }
 }

@@ -1,2 +1,21 @@
 {
+  "item-inkpot-black": "Black Ink Pot",
+  "item-inkpot-white": "White Ink Pot",
+  "item-inkpot-red": "Red Ink Pot",
+  "item-inkpot-blue": "Blue Ink Pot",
+  "item-inkpot-yellow": "Yellow Ink Pot",
+  "item-inkpot-green": "Green Ink Pot",
+  "item-inkpot-brown": "Brown Ink Pot",
+  "item-inkpot-orange": "Orange Ink Pot",
+
+  "itemdesc-inkpot-black": "A pot of black ink made from charcoal pigment.",
+  "itemdesc-inkpot-white": "A pot of white ink made from chalk pigment.",
+  "itemdesc-inkpot-red": "A pot of red ink made from berry or cinnabar pigment.",
+  "itemdesc-inkpot-blue": "A pot of blue ink made from lapis or blue clay pigment.",
+  "itemdesc-inkpot-yellow": "A pot of yellow ink made from flower or sulfur pigment.",
+  "itemdesc-inkpot-green": "A pot of green ink made from malachite or fern pigment.",
+  "itemdesc-inkpot-brown": "A pot of brown ink made from clay or bark pigment.",
+  "itemdesc-inkpot-orange": "A pot of orange ink made from flower or rust pigment.",
+
+  "stencilandstamping:inkpot-uses": "Uses: {0}/{1}"
 }

@@ -1,0 +1,32 @@
+{
+  "code": "inkpot",
+  "class": "ItemInkPot",
+  "variantgroups": [
+    {
+      "code": "color",
+      "states": ["black", "white", "red", "blue", "yellow", "green", "brown", "orange"]
+    }
+  ],
+  "maxstacksize": 4,
+  "durability": 20,
+  "creativeinventory": {
+    "general": ["*"],
+    "items": ["*"]
+  },
+  "shape": { "base": "stencilandstamping:item/inkpot" },
+  "textures": {
+    "ink": { "base": "stencilandstamping:item/inkpot-{color}" }
+  },
+  "guiTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": -30, "y": 45, "z": 0 },
+    "origin": { "x": 0.5, "y": 0.35, "z": 0.5 },
+    "scale": 2.5
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 0, "y": 0, "z": 0 },
+    "origin": { "x": 0.5, "y": 0.5, "z": 0.5 },
+    "scale": 3.0
+  }
+}

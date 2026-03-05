@@ -13,6 +13,9 @@ namespace StencilAndStamping
         // Ink
         public int InkUsesPerPot { get; set; } = 20;
 
+        // Layers
+        public int MaxLayersPerFace { get; set; } = 4;
+
         // Weathering
         public bool EnableWeathering { get; set; } = true;
         public int WeatheringDays { get; set; } = 30;
