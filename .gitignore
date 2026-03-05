@@ -1,0 +1,69 @@
+# =========================
+# .NET / C# Build Output
+# =========================
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.pdb
+*.exe
+*.cache
+*.nupkg
+*.snupkg
+project.lock.json
+
+# =========================
+# IDEs
+# =========================
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+
+# JetBrains Rider
+.idea/
+.run/
+*.sln.iml
+
+# VS Code
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# =========================
+# OS Junk
+# =========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*~
+
+# =========================
+# Vintage Story Mod Specific
+# =========================
+
+# Packaged mod zips (build these in CI, not in repo)
+*.zip
+
+# Runtime-compiled cache if testing loose .cs in Mods/
+ModCompilationCache/
+
+# VS Model Creator backup/autosave files
+*.vsmcbackup
+*.autosave
+
+# Mod config generated at runtime (player-specific)
+ModConfig/
+
+# =========================
+# NuGet
+# =========================
+packages/
+*.nupkg
+.nuget/

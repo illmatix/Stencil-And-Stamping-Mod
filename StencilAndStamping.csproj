@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>StencilAndStamping</AssemblyName>
+    <RootNamespace>StencilAndStamping</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <!-- Vintage Story install path — adjust if yours differs -->
+  <PropertyGroup>
+    <VintageStoryPath>$(HOME)/.local/share/vintagestory</VintageStoryPath>
+    <VintageStoryDataPath>$(HOME)/.config/VintagestoryData</VintageStoryDataPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="VintagestoryAPI">
+      <HintPath>$(VintageStoryPath)/VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VintagestoryLib">
+      <HintPath>$(VintageStoryPath)/VintagestoryLib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Vintagestory">
+      <HintPath>$(VintageStoryPath)/Vintagestory.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VSSurvivalMod">
+      <HintPath>$(VintageStoryPath)/Mods/VSSurvivalMod.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Copy built DLL into the mod folder for testing -->
+  <Target Name="CopyToMods" AfterTargets="Build">
+    <PropertyGroup>
+      <ModOutputDir>$(VintageStoryDataPath)/Mods/StencilAndStamping</ModOutputDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(ModOutputDir)" />
+    <Copy SourceFiles="$(OutputPath)/$(AssemblyName).dll" DestinationFolder="$(ModOutputDir)" />
+    <Copy SourceFiles="$(OutputPath)/$(AssemblyName).pdb" DestinationFolder="$(ModOutputDir)" Condition="Exists('$(OutputPath)/$(AssemblyName).pdb')" />
+    <Copy SourceFiles="$(ProjectDir)/modinfo.json" DestinationFolder="$(ModOutputDir)" />
+
+    <!-- Copy assets folder -->
+    <ItemGroup>
+      <AssetFiles Include="$(ProjectDir)/assets/**/*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(AssetFiles)" DestinationFiles="@(AssetFiles->'$(ModOutputDir)/assets/%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+
+</Project>
