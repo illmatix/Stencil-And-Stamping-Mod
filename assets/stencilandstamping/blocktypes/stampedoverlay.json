@@ -5,7 +5,9 @@
   "behaviors": [],
   "creativeinventory": {},
   "shape": { "base": "stencilandstamping:block/stampedoverlay" },
-  "textures": {},
+  "textures": {
+    "overlay": { "base": "game:block/wood/planks/oak1" }
+  },
   "drawtype": "JSON",
   "renderpass": "OpaqueNoCull",
   "sidesolid": {

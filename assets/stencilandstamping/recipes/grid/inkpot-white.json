@@ -1,0 +1,15 @@
+{
+  "ingredientPattern": "PB,_W",
+  "ingredients": {
+    "P": { "type": "item", "code": "game:ite-ite-chalk-ite-*" },
+    "B": { "type": "item", "code": "game:fat" },
+    "W": { "type": "item", "code": "game:bowl-raw" }
+  },
+  "width": 2,
+  "height": 2,
+  "output": {
+    "type": "item",
+    "code": "stencilandstamping:inkpot-white",
+    "quantity": 1
+  }
+}
