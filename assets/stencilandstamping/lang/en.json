@@ -46,5 +46,8 @@
   "itemdesc-stamp-iron": "A stamp with an iron stencil. The finest detail, longest life.",
 
   "stencilandstamping:stamp-cached": "Design cached — ready to re-stamp",
-  "stencilandstamping:stamp-nodesign": "No design — assemble with a designed stencil"
+  "stencilandstamping:stamp-nodesign": "No design — assemble with a designed stencil",
+
+  "block-cuttingboard": "Cutting Board",
+  "blockdesc-cuttingboard": "A flat board for cutting stencil patterns. Right-click with a blank stencil to design."
 }

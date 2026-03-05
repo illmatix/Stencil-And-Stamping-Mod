@@ -1,0 +1,43 @@
+{
+  "code": "cuttingboard",
+  "class": "BlockCuttingBoard",
+  "entityClass": "BECuttingBoard",
+  "behaviors": [],
+  "creativeinventory": {
+    "general": ["*"],
+    "construction": ["*"]
+  },
+  "shape": { "base": "stencilandstamping:block/cuttingboard" },
+  "textures": {
+    "wood": { "base": "game:block/wood/planks/oak1" }
+  },
+  "drawtype": "JSON",
+  "renderpass": "OpaqueNoCull",
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "blockmaterial": "Wood",
+  "resistance": 2.0,
+  "lightAbsorption": 0,
+  "maxStackSize": 4,
+  "collisionBoxes": [
+    { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.125, "z2": 0.9375 }
+  ],
+  "selectionBoxes": [
+    { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.125, "z2": 0.9375 }
+  ],
+  "sounds": {
+    "place": "game:block/planks",
+    "break": "game:block/planks"
+  },
+  "drops": [
+    {
+      "type": "block",
+      "code": "stencilandstamping:cuttingboard",
+      "quantity": { "avg": 1 }
+    }
+  ]
+}

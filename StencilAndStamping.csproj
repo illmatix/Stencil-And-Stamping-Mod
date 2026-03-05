@@ -33,6 +33,10 @@
       <HintPath>$(VintageStoryPath)/Mods/VSSurvivalMod.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>$(VintageStoryPath)/Lib/protobuf-net.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
 
   <!-- Copy built DLL into the mod folder for testing -->
