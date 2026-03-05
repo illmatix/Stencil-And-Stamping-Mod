@@ -49,5 +49,8 @@
   "stencilandstamping:stamp-nodesign": "No design — assemble with a designed stencil",
 
   "block-cuttingboard": "Cutting Board",
-  "blockdesc-cuttingboard": "A flat board for cutting stencil patterns. Right-click with a blank stencil to design."
+  "blockdesc-cuttingboard": "A flat board for cutting stencil patterns. Right-click with a blank stencil to design.",
+
+  "block-stampedoverlay": "Stamped Design",
+  "blockdesc-stampedoverlay": "A decorative stamped pattern. Right-click to scrape off the top layer."
 }

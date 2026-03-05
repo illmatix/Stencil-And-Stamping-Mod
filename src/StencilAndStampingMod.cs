@@ -1,6 +1,6 @@
-using System;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 
 namespace StencilAndStamping
@@ -28,13 +28,16 @@ namespace StencilAndStamping
             api.RegisterItemClass("ItemStamp", typeof(ItemStamp));
             api.RegisterBlockClass("BlockCuttingBoard", typeof(BlockCuttingBoard));
             api.RegisterBlockEntityClass("BECuttingBoard", typeof(BlockEntityCuttingBoard));
+            api.RegisterBlockClass("BlockStampedOverlay", typeof(BlockStampedOverlay));
+            api.RegisterBlockEntityClass("BEStampedOverlay", typeof(BlockEntityStampedOverlay));
         }
 
         public override void StartClientSide(ICoreClientAPI capi)
         {
             ClientChannel = capi.Network
                 .RegisterChannel(NetworkChannelId)
-                .RegisterMessageType<CuttingBoardDesignPacket>();
+                .RegisterMessageType<CuttingBoardDesignPacket>()
+                .RegisterMessageType<StampDesignPacket>();
         }
 
         public override void StartServerSide(ICoreServerAPI sapi)
@@ -42,7 +45,9 @@ namespace StencilAndStamping
             sapi.Network
                 .RegisterChannel(NetworkChannelId)
                 .RegisterMessageType<CuttingBoardDesignPacket>()
-                .SetMessageHandler<CuttingBoardDesignPacket>(OnDesignPacketReceived);
+                .RegisterMessageType<StampDesignPacket>()
+                .SetMessageHandler<CuttingBoardDesignPacket>(OnDesignPacketReceived)
+                .SetMessageHandler<StampDesignPacket>(OnStampPacketReceived);
         }
 
         private void OnDesignPacketReceived(IServerPlayer fromPlayer, CuttingBoardDesignPacket packet)
@@ -97,6 +102,33 @@ namespace StencilAndStamping
                 boardPos.X + 0.5, boardPos.Y + 0.5, boardPos.Z + 0.5,
                 fromPlayer, true, 12f
             );
+        }
+
+        private void OnStampPacketReceived(IServerPlayer fromPlayer, StampDesignPacket packet)
+        {
+            var world = fromPlayer.Entity.World;
+
+            // Validate
+            if (packet.GridSize < 2 || packet.GridSize > 5) return;
+            if (packet.CellColors == null || packet.CellColors.Length != packet.GridSize * packet.GridSize) return;
+
+            bool anyColored = false;
+            foreach (string c in packet.CellColors)
+            {
+                if (!string.IsNullOrEmpty(c)) { anyColored = true; break; }
+            }
+            if (!anyColored) return;
+
+            // Check player is holding a designed stamp
+            ItemSlot activeSlot = fromPlayer.InventoryManager.ActiveHotbarSlot;
+            if (activeSlot == null || activeSlot.Empty) return;
+            if (activeSlot.Itemstack?.Item is not ItemStamp) return;
+
+            var overlayPos = packet.TargetPos;
+            var face = BlockFacing.FromCode(packet.Face);
+            if (face == null) return;
+
+            ItemStamp.ApplyStamp(world, fromPlayer, activeSlot, overlayPos, face, packet.CellColors);
         }
     }
 }

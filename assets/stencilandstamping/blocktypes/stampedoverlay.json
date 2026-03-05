@@ -1,0 +1,31 @@
+{
+  "code": "stampedoverlay",
+  "class": "BlockStampedOverlay",
+  "entityClass": "BEStampedOverlay",
+  "behaviors": [],
+  "creativeinventory": {},
+  "shape": { "base": "stencilandstamping:block/stampedoverlay" },
+  "textures": {},
+  "drawtype": "JSON",
+  "renderpass": "OpaqueNoCull",
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "blockmaterial": "Other",
+  "resistance": 0.5,
+  "lightAbsorption": 0,
+  "maxStackSize": 0,
+  "replaceable": 900,
+  "collisionBoxes": [],
+  "selectionBoxes": [
+    { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.0625, "z2": 1 }
+  ],
+  "sounds": {
+    "place": "game:block/cloth",
+    "break": "game:block/cloth"
+  },
+  "drops": []
+}
