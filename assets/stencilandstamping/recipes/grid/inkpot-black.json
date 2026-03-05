@@ -1,7 +1,7 @@
 {
   "ingredientPattern": "PB,_W",
   "ingredients": {
-    "P": { "type": "item", "code": "game:charcoal" },
+    "P": { "type": "item", "code": "game:powder-charcoal" },
     "B": { "type": "item", "code": "game:fat" },
     "W": { "type": "block", "code": "game:bowl-*-raw" }
   },
