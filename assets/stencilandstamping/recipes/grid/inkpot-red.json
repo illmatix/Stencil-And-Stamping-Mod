@@ -3,7 +3,7 @@
   "ingredients": {
     "P": { "type": "item", "code": "game:fruit-redcurrant" },
     "B": { "type": "item", "code": "game:resin" },
-    "W": { "type": "item", "code": "game:bowl-raw" }
+    "W": { "type": "block", "code": "game:bowl-*-raw" }
   },
   "width": 2,
   "height": 2,
