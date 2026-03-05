@@ -1,0 +1,15 @@
+{
+  "ingredientPattern": "PB,_W",
+  "ingredients": {
+    "P": { "type": "item", "code": "game:fruit-redcurrant" },
+    "B": { "type": "item", "code": "game:resin" },
+    "W": { "type": "item", "code": "game:bowl-raw" }
+  },
+  "width": 2,
+  "height": 2,
+  "output": {
+    "type": "item",
+    "code": "stencilandstamping:inkpot-red",
+    "quantity": 1
+  }
+}

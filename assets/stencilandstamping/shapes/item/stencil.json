@@ -1,0 +1,21 @@
+{
+  "editor": { "allAngles": false, "entityTextureMode": false },
+  "textureWidth": 16,
+  "textureHeight": 16,
+  "textures": {},
+  "elements": [
+    {
+      "name": "Sheet",
+      "from": [ 2, 0, 2 ],
+      "to": [ 14, 1, 14 ],
+      "faces": {
+        "north": { "texture": "#material", "uv": [ 0, 0, 12, 1 ] },
+        "east":  { "texture": "#material", "uv": [ 0, 0, 12, 1 ] },
+        "south": { "texture": "#material", "uv": [ 0, 0, 12, 1 ] },
+        "west":  { "texture": "#material", "uv": [ 0, 0, 12, 1 ] },
+        "up":    { "texture": "#material", "uv": [ 0, 0, 12, 12 ] },
+        "down":  { "texture": "#material", "uv": [ 0, 0, 12, 12 ] }
+      }
+    }
+  ]
+}

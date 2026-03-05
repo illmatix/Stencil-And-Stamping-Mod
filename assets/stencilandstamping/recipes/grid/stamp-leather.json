@@ -1,0 +1,14 @@
+{
+  "ingredientPattern": "S,T",
+  "ingredients": {
+    "S": { "type": "item", "code": "stencilandstamping:stencil-leather" },
+    "T": { "type": "item", "code": "game:stick" }
+  },
+  "width": 1,
+  "height": 2,
+  "output": {
+    "type": "item",
+    "code": "stencilandstamping:stamp-leather",
+    "quantity": 1
+  }
+}

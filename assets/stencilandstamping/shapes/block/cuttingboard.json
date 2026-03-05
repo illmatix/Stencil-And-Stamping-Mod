@@ -1,0 +1,21 @@
+{
+  "editor": { "allAngles": false, "entityTextureMode": false },
+  "textureWidth": 16,
+  "textureHeight": 16,
+  "textures": {},
+  "elements": [
+    {
+      "name": "Board",
+      "from": [ 1, 0, 1 ],
+      "to": [ 15, 2, 15 ],
+      "faces": {
+        "north": { "texture": "#wood", "uv": [ 0, 0, 14, 2 ] },
+        "east":  { "texture": "#wood", "uv": [ 0, 0, 14, 2 ] },
+        "south": { "texture": "#wood", "uv": [ 0, 0, 14, 2 ] },
+        "west":  { "texture": "#wood", "uv": [ 0, 0, 14, 2 ] },
+        "up":    { "texture": "#wood", "uv": [ 0, 0, 14, 14 ] },
+        "down":  { "texture": "#wood", "uv": [ 0, 0, 14, 14 ] }
+      }
+    }
+  ]
+}

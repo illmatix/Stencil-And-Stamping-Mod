@@ -1,0 +1,56 @@
+{
+  "item-inkpot-black": "Black Ink Pot",
+  "item-inkpot-white": "White Ink Pot",
+  "item-inkpot-red": "Red Ink Pot",
+  "item-inkpot-blue": "Blue Ink Pot",
+  "item-inkpot-yellow": "Yellow Ink Pot",
+  "item-inkpot-green": "Green Ink Pot",
+  "item-inkpot-brown": "Brown Ink Pot",
+  "item-inkpot-orange": "Orange Ink Pot",
+
+  "itemdesc-inkpot-black": "A pot of black ink made from charcoal pigment.",
+  "itemdesc-inkpot-white": "A pot of white ink made from chalk pigment.",
+  "itemdesc-inkpot-red": "A pot of red ink made from berry or cinnabar pigment.",
+  "itemdesc-inkpot-blue": "A pot of blue ink made from lapis or blue clay pigment.",
+  "itemdesc-inkpot-yellow": "A pot of yellow ink made from flower or sulfur pigment.",
+  "itemdesc-inkpot-green": "A pot of green ink made from malachite or fern pigment.",
+  "itemdesc-inkpot-brown": "A pot of brown ink made from clay or bark pigment.",
+  "itemdesc-inkpot-orange": "A pot of orange ink made from flower or rust pigment.",
+
+  "stencilandstamping:inkpot-uses": "Uses: {0}/{1}",
+
+  "item-stencil-leather": "Leather Stencil",
+  "item-stencil-copper": "Copper Stencil",
+  "item-stencil-tinbronze": "Tin Bronze Stencil",
+  "item-stencil-iron": "Iron Stencil",
+
+  "itemdesc-stencil-leather": "A leather stencil sheet. Cheap but wears quickly.",
+  "itemdesc-stencil-copper": "A copper stencil sheet. Clean lines, decent durability.",
+  "itemdesc-stencil-tinbronze": "A tin bronze stencil sheet. Crisp detail, long-lasting.",
+  "itemdesc-stencil-iron": "An iron stencil sheet. The sharpest patterns, built to last.",
+
+  "stencilandstamping:stencil-grid": "Grid: {0}x{1}",
+  "stencilandstamping:stencil-filled": "Cells: {0}/{1} filled",
+  "stencilandstamping:stencil-cellborders": "Cell borders: on",
+  "stencilandstamping:stencil-edgeborder": "Edge border: on",
+  "stencilandstamping:stencil-blank": "Blank — use on a cutting board to design",
+
+  "item-stamp-leather": "Leather Stamp",
+  "item-stamp-copper": "Copper Stamp",
+  "item-stamp-tinbronze": "Tin Bronze Stamp",
+  "item-stamp-iron": "Iron Stamp",
+
+  "itemdesc-stamp-leather": "A stamp with a leather stencil. Ready to ink and press.",
+  "itemdesc-stamp-copper": "A stamp with a copper stencil. Clean impressions.",
+  "itemdesc-stamp-tinbronze": "A stamp with a tin bronze stencil. Crisp and durable.",
+  "itemdesc-stamp-iron": "A stamp with an iron stencil. The finest detail, longest life.",
+
+  "stencilandstamping:stamp-cached": "Design cached — ready to re-stamp",
+  "stencilandstamping:stamp-nodesign": "No design — assemble with a designed stencil",
+
+  "block-cuttingboard": "Cutting Board",
+  "blockdesc-cuttingboard": "A flat board for cutting stencil patterns. Right-click with a blank stencil to design.",
+
+  "block-stampedoverlay": "Stamped Design",
+  "blockdesc-stampedoverlay": "A decorative stamped pattern. Right-click to scrape off the top layer."
+}

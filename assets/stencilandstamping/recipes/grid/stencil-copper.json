@@ -1,0 +1,13 @@
+{
+  "ingredientPattern": "MM,MM",
+  "ingredients": {
+    "M": { "type": "item", "code": "game:metalplate-copper" }
+  },
+  "width": 2,
+  "height": 2,
+  "output": {
+    "type": "item",
+    "code": "stencilandstamping:stencil-copper",
+    "quantity": 1
+  }
+}

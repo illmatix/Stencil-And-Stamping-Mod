@@ -1,0 +1,34 @@
+{
+  "editor": { "allAngles": false, "entityTextureMode": false },
+  "textureWidth": 16,
+  "textureHeight": 16,
+  "textures": {},
+  "elements": [
+    {
+      "name": "Pot",
+      "from": [ 5, 0, 5 ],
+      "to": [ 11, 6, 11 ],
+      "faces": {
+        "north": { "texture": "#ink", "uv": [ 0, 0, 6, 6 ] },
+        "east":  { "texture": "#ink", "uv": [ 0, 0, 6, 6 ] },
+        "south": { "texture": "#ink", "uv": [ 0, 0, 6, 6 ] },
+        "west":  { "texture": "#ink", "uv": [ 0, 0, 6, 6 ] },
+        "up":    { "texture": "#ink", "uv": [ 0, 0, 6, 6 ] },
+        "down":  { "texture": "#ink", "uv": [ 0, 0, 6, 6 ] }
+      }
+    },
+    {
+      "name": "Rim",
+      "from": [ 4, 5, 4 ],
+      "to": [ 12, 7, 12 ],
+      "faces": {
+        "north": { "texture": "#ink", "uv": [ 0, 6, 8, 8 ] },
+        "east":  { "texture": "#ink", "uv": [ 0, 6, 8, 8 ] },
+        "south": { "texture": "#ink", "uv": [ 0, 6, 8, 8 ] },
+        "west":  { "texture": "#ink", "uv": [ 0, 6, 8, 8 ] },
+        "up":    { "texture": "#ink", "uv": [ 0, 6, 8, 14 ] },
+        "down":  { "texture": "#ink", "uv": [ 0, 6, 8, 14 ] }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "stencilandstamping",
+  "name": "Stencil & Stamping",
+  "authors": ["illmatix"],
+  "description": "Cut stencil patterns, mix inks from natural pigments, and stamp decorative designs onto surfaces.",
+  "version": "0.1.0",
+  "dependencies": {
+    "game": ""
+  }
+}
