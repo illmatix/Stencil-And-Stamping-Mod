@@ -237,18 +237,26 @@ namespace StencilAndStamping
                 return true;
             }
 
-            // Check offhand has a knife
-            ItemSlot offhandSlot = player.Entity.LeftHandItemSlot;
-            if (offhandSlot == null || offhandSlot.Empty)
+            // Check hotbar has a knife
+            bool hasKnife = false;
+            var hotbar = player.InventoryManager.GetOwnInventory(GlobalConstants.hotBarInvClassName);
+            if (hotbar != null)
             {
-                capi.TriggerIngameError(this, "noknife", "Hold a knife in your offhand.");
-                return true;
+                foreach (ItemSlot slot in hotbar)
+                {
+                    if (slot == null || slot.Empty) continue;
+                    string code = slot.Itemstack?.Collectible?.Code?.Path ?? "";
+                    if (code.Contains("knife"))
+                    {
+                        hasKnife = true;
+                        break;
+                    }
+                }
             }
 
-            string offhandCode = offhandSlot.Itemstack?.Collectible?.Code?.Path ?? "";
-            if (!offhandCode.Contains("knife"))
+            if (!hasKnife)
             {
-                capi.TriggerIngameError(this, "noknife", "Hold a knife in your offhand.");
+                capi.TriggerIngameError(this, "noknife", "You need a knife in your hotbar.");
                 return true;
             }
 

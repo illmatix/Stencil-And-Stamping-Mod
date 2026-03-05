@@ -34,6 +34,7 @@
   "stencilandstamping:stencil-cellborders": "Cell borders: on",
   "stencilandstamping:stencil-edgeborder": "Edge border: on",
   "stencilandstamping:stencil-blank": "Blank — use on a cutting board to design",
+  "stencilandstamping:stencil-cached": "Colors cached — right-click surface to re-apply",
 
   "item-stamp-leather": "Leather Stamp",
   "item-stamp-copper": "Copper Stamp",
