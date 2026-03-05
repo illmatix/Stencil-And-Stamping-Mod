@@ -1,7 +1,7 @@
 {
-  "ingredientPattern": "PB,_W",
+  "ingredientPattern": "PB\t_W",
   "ingredients": {
-    "P": { "type": "block", "code": "game:rock-chalk" },
+    "P": { "type": "item", "code": "game:stone-chalk" },
     "B": { "type": "item", "code": "game:fat" },
     "W": { "type": "block", "code": "game:bowl-*-raw" }
   },

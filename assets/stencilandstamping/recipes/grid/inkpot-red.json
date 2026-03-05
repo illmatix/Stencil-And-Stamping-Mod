@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "PB,_W",
+  "ingredientPattern": "PB\t_W",
   "ingredients": {
     "P": { "type": "item", "code": "game:fruit-redcurrant" },
     "B": { "type": "item", "code": "game:resin" },

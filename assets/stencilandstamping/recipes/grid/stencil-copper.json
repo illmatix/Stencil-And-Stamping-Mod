@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "MM,MM",
+  "ingredientPattern": "MM\tMM",
   "ingredients": {
     "M": { "type": "item", "code": "game:metalplate-copper" }
   },

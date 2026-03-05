@@ -1,5 +1,5 @@
 {
-  "ingredientPattern": "S,T",
+  "ingredientPattern": "S\tT",
   "ingredients": {
     "S": { "type": "item", "code": "stencilandstamping:stencil-leather" },
     "T": { "type": "item", "code": "game:stick" }
