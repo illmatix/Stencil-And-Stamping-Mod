@@ -18,6 +18,7 @@ namespace StencilAndStamping
             }
 
             api.RegisterItemClass("ItemInkPot", typeof(ItemInkPot));
+            api.RegisterItemClass("ItemStencil", typeof(ItemStencil));
         }
     }
 }

@@ -17,5 +17,21 @@
   "itemdesc-inkpot-brown": "A pot of brown ink made from clay or bark pigment.",
   "itemdesc-inkpot-orange": "A pot of orange ink made from flower or rust pigment.",
 
-  "stencilandstamping:inkpot-uses": "Uses: {0}/{1}"
+  "stencilandstamping:inkpot-uses": "Uses: {0}/{1}",
+
+  "item-stencil-leather": "Leather Stencil",
+  "item-stencil-copper": "Copper Stencil",
+  "item-stencil-tinbronze": "Tin Bronze Stencil",
+  "item-stencil-iron": "Iron Stencil",
+
+  "itemdesc-stencil-leather": "A leather stencil sheet. Cheap but wears quickly.",
+  "itemdesc-stencil-copper": "A copper stencil sheet. Clean lines, decent durability.",
+  "itemdesc-stencil-tinbronze": "A tin bronze stencil sheet. Crisp detail, long-lasting.",
+  "itemdesc-stencil-iron": "An iron stencil sheet. The sharpest patterns, built to last.",
+
+  "stencilandstamping:stencil-grid": "Grid: {0}x{1}",
+  "stencilandstamping:stencil-filled": "Cells: {0}/{1} filled",
+  "stencilandstamping:stencil-cellborders": "Cell borders: on",
+  "stencilandstamping:stencil-edgeborder": "Edge border: on",
+  "stencilandstamping:stencil-blank": "Blank — use on a cutting board to design"
 }
