@@ -2,7 +2,7 @@
 
 ## v1.0 — MVP
 
-Core loop: cut stencil, mix ink, assemble stamp, design on grid, stamp a surface.
+Core loop: cut stencil on board, add ink colors, apply stencil to surface.
 
 - [ ] Cutting board block with grid design GUI
 - [ ] Grid size selection (2x2, 3x3, 4x4, 5x5)
@@ -12,14 +12,13 @@ Core loop: cut stencil, mix ink, assemble stamp, design on grid, stamp a surface
 - [ ] Edge border toggle (outer frame)
 - [ ] Stencil items (leather + copper)
 - [ ] Ink pot crafting (black, white, red — 3 basic colors)
-- [ ] Stamp assembly recipe
-- [ ] Stamping GUI — per-cell color assignment from inventory inks
+- [ ] Stencil color GUI — per-cell color assignment from hotbar inks
 - [ ] Stamped overlay block with grid + multi-color rendering
-- [ ] Layer system — multiple stamps on the same face (up to configurable max)
+- [ ] Layer system — multiple stencils on the same face (up to configurable max)
 - [ ] Layer removal — scrape topmost layer without destroying layers below
-- [ ] Stamp design caching (remember last layout for quick re-stamping)
+- [ ] Stencil color caching (remember last layout for quick re-application)
 - [ ] Surface validation (stone, plaster, wood, clay)
-- [ ] Stamp durability and per-cell ink consumption
+- [ ] Stencil durability and per-cell ink consumption
 - [ ] Config file with basic toggles
 - [ ] Placeholder textures and shapes
 - [ ] Lang file with item names
@@ -36,9 +35,9 @@ Expand the ink and stencil catalog.
 
 Environmental interaction and visual improvements.
 
-- [ ] Weathering system (outdoor stamps fade over configurable days)
+- [ ] Weathering system (outdoor patterns fade over configurable days)
 - [ ] Pattern removal (chisel or scraping tool)
-- [ ] Stamp sound effects
+- [ ] Application sound effects
 - [ ] Ink splatter particles
 - [ ] Handbook entries and illustrations
 
@@ -52,19 +51,22 @@ Blend pigments to create custom ink colors.
 - [ ] Ratio control — different proportions shift the resulting hue
 - [ ] Discovery system — new colors unlocked as players experiment
 
-## v1.4 — Advanced Stamping
+## v1.4 — Advanced Stenciling
 
 New mechanics for creative players.
 
 - [ ] Pattern rotation (0/90/180/270 when placing)
 - [ ] Pattern mirroring (horizontal flip)
-- [ ] Stamp roller tool for continuous border lines
+- [ ] Stencil roller tool for continuous border lines
 - [ ] Reorder layers (move a layer up/down in the stack)
 
-## v2.0 — Design Library
+## v2.0 — Seal Stamps & Design Library
 
-Save and share designs.
+Small letter-seal stamps and design sharing.
 
+- [ ] Seal stamp item — small decorative mark (like a wax seal on a letter)
+- [ ] Seal carving system (design a seal icon)
+- [ ] Seal ink colors
 - [ ] Design book item (save grid layouts for re-use)
 - [ ] Copy design from existing stamped surface
 - [ ] Import/export design files

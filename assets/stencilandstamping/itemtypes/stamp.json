@@ -14,10 +14,7 @@
     "stamp-tinbronze": 350,
     "stamp-iron": 500
   },
-  "creativeinventory": {
-    "general": ["*"],
-    "items": ["*"]
-  },
+  "creativeinventory": {},
   "shape": { "base": "stencilandstamping:item/stamp" },
   "textures": {
     "material": { "base": "stencilandstamping:item/stamp-{material}" }

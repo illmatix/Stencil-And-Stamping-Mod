@@ -132,16 +132,16 @@ namespace StencilAndStamping
             }
             if (!anyColored) return;
 
-            // Check player is holding a designed stamp
+            // Check player is holding a designed stencil
             ItemSlot activeSlot = fromPlayer.InventoryManager.ActiveHotbarSlot;
             if (activeSlot == null || activeSlot.Empty) return;
-            if (activeSlot.Itemstack?.Item is not ItemStamp) return;
+            if (activeSlot.Itemstack?.Item is not ItemStencil) return;
 
             var overlayPos = packet.TargetPos;
             var face = BlockFacing.FromCode(packet.Face);
             if (face == null) return;
 
-            ItemStamp.ApplyStamp(world, fromPlayer, activeSlot, overlayPos, face, packet.CellColors);
+            ItemStencil.ApplyStencil(world, fromPlayer, activeSlot, overlayPos, face, packet.CellColors);
         }
     }
 }

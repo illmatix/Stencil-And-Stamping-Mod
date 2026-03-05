@@ -9,7 +9,7 @@ namespace StencilAndStamping
     public class GuiDialogStamping : GuiDialog
     {
         private IPlayer player;
-        private ItemSlot stampSlot;
+        private ItemSlot stencilSlot;
         private BlockSelection blockSel;
 
         private int gridSize;
@@ -20,16 +20,16 @@ namespace StencilAndStamping
 
         public override string ToggleKeyCombinationCode => null;
 
-        public GuiDialogStamping(ICoreClientAPI capi, IPlayer player, ItemSlot stampSlot, BlockSelection blockSel)
+        public GuiDialogStamping(ICoreClientAPI capi, IPlayer player, ItemSlot stencilSlot, BlockSelection blockSel)
             : base(capi)
         {
             this.player = player;
-            this.stampSlot = stampSlot;
+            this.stencilSlot = stencilSlot;
             this.blockSel = blockSel;
 
-            var stamp = stampSlot.Itemstack.Item as ItemStamp;
-            gridSize = stamp.GetGridSize(stampSlot.Itemstack);
-            cellPattern = stamp.GetCellPattern(stampSlot.Itemstack) ?? new bool[gridSize * gridSize];
+            var stencil = stencilSlot.Itemstack.Item as ItemStencil;
+            gridSize = stencil.GetGridSize(stencilSlot.Itemstack);
+            cellPattern = stencil.GetCellPattern(stencilSlot.Itemstack) ?? new bool[gridSize * gridSize];
             cellColors = new string[gridSize * gridSize];
 
             // Find available ink colors from player inventory
@@ -71,7 +71,7 @@ namespace StencilAndStamping
             var composer = capi.Gui
                 .CreateCompo("stamping-design", dialogBounds)
                 .AddShadedDialogBG(bgBounds)
-                .AddDialogTitleBar("Stamp Colors", OnTitleBarClose)
+                .AddDialogTitleBar("Stencil Colors", OnTitleBarClose)
                 .BeginChildElements(bgBounds);
 
             // --- Grid cells (left side) ---
@@ -224,8 +224,8 @@ namespace StencilAndStamping
                 Face = blockSel.Face.Code,
                 GridSize = gridSize,
                 CellColors = cellColors,
-                CellBorders = (stampSlot.Itemstack.Item as ItemStamp)?.HasCellBorders(stampSlot.Itemstack) ?? false,
-                EdgeBorder = (stampSlot.Itemstack.Item as ItemStamp)?.HasEdgeBorder(stampSlot.Itemstack) ?? false
+                CellBorders = (stencilSlot.Itemstack.Item as ItemStencil)?.HasCellBorders(stencilSlot.Itemstack) ?? false,
+                EdgeBorder = (stencilSlot.Itemstack.Item as ItemStencil)?.HasEdgeBorder(stencilSlot.Itemstack) ?? false
             });
 
             TryClose();
