@@ -85,6 +85,22 @@ namespace StencilAndStamping
             stack.Attributes.RemoveAttribute("cachedColors");
         }
 
+        // --- Crafting: inherit design from stencil ---
+
+        public override void OnCreatedByCrafting(ItemSlot[] allInputslots, ItemSlot outputSlot, GridRecipe byRecipe)
+        {
+            base.OnCreatedByCrafting(allInputslots, outputSlot, byRecipe);
+
+            foreach (ItemSlot slot in allInputslots)
+            {
+                if (slot?.Itemstack?.Item is ItemStencil)
+                {
+                    CopyDesignFromStencil(slot.Itemstack, outputSlot.Itemstack);
+                    break;
+                }
+            }
+        }
+
         // --- Interaction: stamp a surface ---
 
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
