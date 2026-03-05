@@ -14,6 +14,8 @@ namespace StencilAndStamping
 
         private long weatheringTickId;
         private MeshData mesh;
+        private float whiteU;
+        private float whiteV;
 
         public override void Initialize(ICoreAPI api)
         {
@@ -100,6 +102,15 @@ namespace StencilAndStamping
             if (Api?.Side != EnumAppSide.Client) return;
             if (Layers.Count == 0) { mesh = null; return; }
 
+            // Get the atlas position of our white texture so vertex colors render correctly
+            var capi = Api as ICoreClientAPI;
+            var texPos = capi?.Tesselator.GetTextureSource(Block)?["white"];
+            if (texPos != null)
+            {
+                whiteU = (texPos.x1 + texPos.x2) / 2f;
+                whiteV = (texPos.y1 + texPos.y2) / 2f;
+            }
+
             mesh = new MeshData(24, 36);
 
             BlockFacing face = BlockFacing.FromCode(Face);
@@ -159,7 +170,7 @@ namespace StencilAndStamping
 
             for (int i = 0; i < 4; i++)
             {
-                mesh.AddVertex(verts[i][0], verts[i][1], verts[i][2], 0, 0, color);
+                mesh.AddVertex(verts[i][0], verts[i][1], verts[i][2], whiteU, whiteV, color);
             }
 
             mesh.AddIndex(baseIdx);
